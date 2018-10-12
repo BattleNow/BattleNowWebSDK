@@ -32,4 +32,9 @@ export default class PlayerGroupServices extends BaseService {
     return await response.json() as CreatePlayerGroupResponse
   }
 
+  async sendJoinGroupApply(groupId: number): Promise<any> {
+    const response = await this.fetch(`${this.baseURL}/challenge/player/group/${groupId}/apply`, RequestUtil.buildJsonBodyWithAuth({},this.tokenRepo.get()))
+    return response
+  }
+
 }
