@@ -54,6 +54,4 @@ declare namespace challenge {
     update_at: string;
     views: number;
   }
-
-
 }

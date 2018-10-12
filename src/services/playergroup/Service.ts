@@ -3,6 +3,7 @@ import RequestUtil from '../../utils/RequestUtil'
 import ListResponse from '../../model/response/ListResponse'
 import { PlayerGroupResponse } from '../../model/response/group/PlayerGroupResponse'
 import CreatePlayerGroupRequestBody from '../../model/request/playergroup/CreatePlayerGroupRequestBody'
+import CreatePlayerGroupResponse from '../../model/response/group/CreatePlayerGroupResponse'
 
 /**
  * Player group service
@@ -26,10 +27,9 @@ export default class PlayerGroupServices extends BaseService {
     return await response.json() as PlayerGroupResponse
   }
 
-  async createPlayerGroup(body: CreatePlayerGroupRequestBody): Promise<any> {
+  async createPlayerGroup(body: CreatePlayerGroupRequestBody): Promise<CreatePlayerGroupResponse> {
     const response = await this.fetch(`${this.baseURL}/challenge/player/group/create`, RequestUtil.buildJsonBodyWithAuth(body, this.tokenRepo.get()))
-    return response
+    return await response.json() as CreatePlayerGroupResponse
   }
-
 
 }
