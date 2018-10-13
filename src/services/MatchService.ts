@@ -1,7 +1,7 @@
-import BaseService from '../BaseService'
-import ListResponse from '../../model/response/ListResponse'
-import RequestUtil from '../../utils/RequestUtil'
-import { MatchResponse } from '../../model/response/match/MatchResponse'
+import BaseService from './BaseService'
+import ListResponse from '../model/response/ListResponse'
+import RequestUtil from '../utils/RequestUtil'
+import { MatchResponse } from '../model/response/match/MatchResponse'
 
 export default class MatchServices extends BaseService {
   /**

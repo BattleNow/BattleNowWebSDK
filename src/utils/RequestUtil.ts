@@ -20,6 +20,16 @@ export default class RequestUtil {
     } as RequestInit
   }
 
+  static buildWithAuth(token: string, method: string): RequestInit {
+    return {
+      method: method,
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ${token}`
+      }
+    } as RequestInit
+  }
+
   static buildJSONQuery(method: string): RequestInit {
     return {
       method: method,

@@ -1,7 +1,7 @@
-import BaseService from '../BaseService'
-import RequestUtil from '../../utils/RequestUtil'
-import ListResponse from '../../model/response/ListResponse'
-import { GameResponse } from '../../model/response/game/GameResponse'
+import BaseService from './BaseService'
+import RequestUtil from '../utils/RequestUtil'
+import ListResponse from '../model/response/ListResponse'
+import { GameResponse } from '../model/response/game/GameResponse'
 
 export default class GameServices extends BaseService {
   async getGameList(queryParam: object) {

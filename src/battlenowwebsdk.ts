@@ -1,13 +1,9 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-// import "core-js/fn/array.find"
-// ...
-import Exception = Handlebars.Exception
 import { TokenRepository } from './token/TokenRepository'
-import UserService from './services/user/service'
-import ChallengeServices from './services/challenge/Service'
-import GameServices from './services/game/Service'
-import PlayerGroupServices from './services/playergroup/Service'
-import MatchServices from './services/match/Service'
+import UserService from './services/UserService'
+import ChallengeServices from './services/ChallengeService'
+import GameServices from './services/GameService'
+import PlayerGroupServices from './services/PlayerGroupService'
+import MatchServices from './services/MatchService'
 
 export class BattleNowClient {
   userService: UserService

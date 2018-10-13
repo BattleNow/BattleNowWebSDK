@@ -1,10 +1,9 @@
-import BaseService from '../BaseService'
-import RequestUtil from '../../utils/RequestUtil'
-import UserLoginResponse from '../../model/response/user/UserLoginResponse'
-import ListResponse from '../../model/response/ListResponse'
+import BaseService from './BaseService'
+import RequestUtil from '../utils/RequestUtil'
+import ListResponse from '../model/response/ListResponse'
+import { CreateChallengeRequestBody } from '../model/request/challenge/CreateChallengeRequestBody'
+import { CreateChallengeResponse } from '../model/response/challenge/CreateChallengeResponse'
 import ChallengeResult = challenge.ChallengeResult
-import { CreateChallengeRequestBody } from '../../model/request/challenge/CreateChallengeRequestBody'
-import { CreateChallengeResponse } from '../../model/response/challenge/CreateChallengeResponse'
 
 export default class ChallengeServices extends BaseService {
   async getChallengeList(queryParam: object) {
@@ -39,5 +38,6 @@ export default class ChallengeServices extends BaseService {
       `${this.baseURL}/challenge/${challengeId}/result/upload`,
       RequestUtil.buildJsonBodyWithAuth({ result }, this.tokenRepo.get())
     )
+    return response
   }
 }

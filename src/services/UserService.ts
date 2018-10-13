@@ -1,8 +1,8 @@
-import UserLoginResponse from '../../model/response/user/UserLoginResponse'
-import LoginRequestBody from '../../model/request/user/LoginRequestBody'
-import RequestUtil from '../../utils/RequestUtil'
-import { TokenRepository } from '../../token/TokenRepository'
-import { UserResponse } from '../../model/response/user/UserResponse'
+import UserLoginResponse from '../model/response/user/UserLoginResponse'
+import LoginRequestBody from '../model/request/user/LoginRequestBody'
+import RequestUtil from '../utils/RequestUtil'
+import { TokenRepository } from '../token/TokenRepository'
+import { UserResponse } from '../model/response/user/UserResponse'
 
 export default class UserService {
   private readonly baseURL: string
